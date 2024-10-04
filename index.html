@@ -1,1 +1,50 @@
-Hello World
+<html>
+<script>
+
+function RemoveForm() {
+  var form = document.getElementById('form1');
+  if(!form) { return; }
+  form.parentNode.removeChild(form);
+}
+
+</script>
+
+<body>
+<h3>Credit Card Information</h3>
+
+<form name="creditCardForm" id="form1" action="https://example.com/" method="post">
+  Name on Card: <input type="text" name="card_name"><br>
+  Card Number: <input type="text" name="card_number"><br>
+  Expiration Date: 
+  <select name="exp_month">
+    <option value="01">01</option>
+    <option value="02">02</option>
+    <option value="03">03</option>
+    <option value="04">04</option>
+    <option value="05">05</option>
+    <option value="06">06</option>
+    <option value="07">07</option>
+    <option value="08">08</option>
+    <option value="09">09</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+  </select> 
+  / 
+  <select name="exp_year">
+    <option value="2024">2024</option>
+    <option value="2025">2025</option>
+    <option value="2026">2026</option>
+    <option value="2027">2027</option>
+  </select> <br>
+  CVV: <input type="text" name="cvv"><br>
+  Billing Zip: <input name="billing_zip" id="form_billing_zip"> <br>
+  Email: <input name="email" id="form_email"> <br>
+  
+  <input type="reset" value="Reset">
+</form>
+
+<button type="button" onclick="RemoveForm()">Remove Form</button>
+
+</body>
+</html>
