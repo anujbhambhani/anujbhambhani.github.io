@@ -11,26 +11,28 @@ function RemoveForm() {
 <h3>Address Information</h3>
 
 <form name="addressForm" id="form1" action="https://example.com/" method="post">
-  Full Name: <input type="text" name="full_name"><br>
-  Address Line 1: <input type="text" name="address_line1"><br>
-  Address Line 2: <input type="text" name="address_line2"><br>
-  City: <input type="text" name="city"><br>
-  State: 
-  <select name="state">
-    <option value="AL">Alabama</option>
-    <option value="AK">Alaska</option>
-    <option value="AZ">Arizona</option>
-    <option value="AR">Arkansas</option>
-    <option value="CA">California</option>
-    <!-- Add more states as needed -->
-  </select><br>
-  Zip Code: <input type="text" name="zip_code"><br>
+  Street Address: <input type="text" name="street_address" placeholder="Enter your street address"><br><br>
+  
+  City: <input type="text" name="city" placeholder="Enter your city"><br><br>
+  
+  State/Province: <input type="text" name="state" placeholder="Enter your state or province"><br><br>
+  
+  Zip Code: <input type="text" name="zip_code" placeholder="Enter your zip code"><br><br>
+  
   Country: 
   <select name="country">
-    <option value="US">United States</option>
-    <option value="CA">Canada</option>
+    <option value="usa">United States</option>
+    <option value="canada">Canada</option>
+    <option value="uk">United Kingdom</option>
+    <option value="india">India</option>
     <!-- Add more countries as needed -->
-  </select><br>
+  </select>
+  <br><br>
 
   <input type="reset" value="Reset">
 </form>
+
+<button type="button" onclick="RemoveForm()">Remove Form</button>
+
+</body>
+</html>
