@@ -1,20 +1,34 @@
 <html>
 <script>
-
 function RemoveForm() {
   var form = document.getElementById('form1');
   if(!form) { return; }
   form.parentNode.removeChild(form);
 }
-
 </script>
 
 <body>
-<h3>Email Address Information</h3>
+<h3>Address Information</h3>
 
-<form name="emailForm" id="form1" action="https://example.com/" method="post">
-  Email Address: <input type="email" name="email_address" placeholder="Enter your email address"><br>
+<form name="addressForm" id="form1" action="https://example.com/" method="post">
+  Street Address: <input type="text" name="street_address" placeholder="Enter your street address"><br><br>
   
+  City: <input type="text" name="city" placeholder="Enter your city"><br><br>
+  
+  State/Province: <input type="text" name="state" placeholder="Enter your state or province"><br><br>
+  
+  Zip Code: <input type="text" name="zip_code" placeholder="Enter your zip code"><br><br>
+  
+  Country: 
+  <select name="country">
+    <option value="usa">United States</option>
+    <option value="canada">Canada</option>
+    <option value="uk">United Kingdom</option>
+    <option value="india">India</option>
+    <!-- Add more countries as needed -->
+  </select>
+  <br><br>
+
   <input type="reset" value="Reset">
 </form>
 
